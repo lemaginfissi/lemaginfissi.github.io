@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equic="X-UA-Compatible" content="ie=edge">
+  <title>Lemag</title>
+
+  <link rel="stylesheet" href="finestre_base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css" integrity="sha512-B0mpFwHOmRf8OK4U2MBOhv9W1nbPw/i3W1nBERvMZaTWd3+j+blGbOyv3w1vJgcy3cYhzwgw1ny+TzWICN35Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="https://kit.fontawesome.com/66343c0864.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <a href="index.html"><img src="l-2.png" alt="" height="50px" width="140px"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chi_siamo.html">Azienda</a></li>
+        <li><a href="">Prodotti</a>
+          <ul>
+            <li><a href="finestre_base.html">Finestre</a></li>
+            <li><a href="finestre_scorrevoli.html">Finestre scorrevoli</a></li>
+            <li><a href="porte_base.html">Porte</a></li>
+            <li><a href="accessori.html">Accessori</a></li>
+          </ul>
+        </li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="preventivo.html">Chiedi un preventivo</a></li>
+      </ul>
+   </nav>
+   <ul class="menu">
+     <li><a href="index.html">Home</a></li>
+     <li><a href="chi_siamo.html">Azienda</a></li>
+     <li><a href="prodotti_mobile.html">Prodotti</a></li>
+     <li><a href="contatti.html">Contatti</a></li>
+     <li><a href="preventivo.html">Chiedi un preventivo</a></li>
+       </ul>
+ </div>
+
+
+
+
+ <div class="grid mt-3">
+   <div class="col reveal">
+     <h3 class="big-text">Che cosa stai cercando?</h3>
+   </div>
+ </div>
+
+ <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+   <div class="carousel-cell">
+     <div class="carousel-cell__content zoom">
+       <a href="porte_alluminio.html">
+       ALLUMINIO
+     </a>
+     </div>
+   </div>
+   <div class="carousel-cell">
+     <div class="carousel-cell__content zoom">
+       <a href="porte_ferro.html">
+       FERRO
+     </a>
+     </div>
+   </div>
+</div>
+
+
+
+
+ <footer class="footer">
+  <div class="grid">
+    <div class="col reveal">
+      <img src="l-2.png" alt="" height="80px" width="210px">
+    </div>
+
+    <div class="col reveal">
+      <h4 class="normal-text tw">Copyright © 2022</h4>
+      <h4 class="normal-text tw">Lemag S.R.L.S.</h4>
+    </div>
+
+    <div class="col reveal">
+      <h4 class="normal-text tw"><a href="privacy.html">Informativa sulla privacy</a></h4>
+    </div>
+
+    <div class="col reveal">
+      <h4 class="normal-text tw"><a href="cookie.html">Cookie Policy</a></h4>
+      <a href="https://www.facebook.com/lemag.srls"><i class="fab fa-facebook-square facebook"></i></a>
+      <a href="https://www.instagram.com/lemag.infissi/"><i class="fab fa-instagram instagram"></i></a>
+      <a href="https://www.linkedin.com/in/lemag-s-r-l-s-130694236/"><i class="fab fa-linkedin linkedin"></i></a>
+ </div>
+  </div>
+ </footer>
+
+
+
+
+ <!-- Jquery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js" integrity="sha512-+m9auGg9ZwnDc37W8RSsLhzKBLVOYsf5BKzSpYrYhQQk6hItXOhBFKHuHbMCpoABCUO6l4HVK+dFwxMIME3E7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+   $( document ).ready(function() {
+
+     /* Open Panel */
+     $( ".hamburger" ).on('click', function() {
+       $(".menu").toggleClass("menu--open");
+     });
+
+   });
+   ScrollReveal().reveal('.reveal', { distance: '100px', duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 600 });
+   ScrollReveal().reveal('.zoom', { duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 200, scale: 0.65, mobile: false });
+ </script>
+
+
+
+
+ </body>
+ </html>

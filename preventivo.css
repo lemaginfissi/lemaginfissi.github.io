@@ -1,0 +1,295 @@
+/* ! Base Style */
+body{
+  font-family: 'Inter', sans-serif;font-size: 16px;margin: 0;
+}
+.menu {display: none;}
+a{text-decoration: none; color: #fff;}
+
+h1, h2, h3, h4, h5, p{color: #black; padding-bottom: 30px;}
+
+p{
+  line-height: 28px;
+  color: #363636;
+  font-weight: 300;
+}
+
+.big-text{font-size: 70px; font-weight: 750;}
+.med-text{font-size: 40px;}
+.normal-text{font-size: 20px;}
+
+.small-text{font-size: 14px;}
+
+.intro-text{text-transform: uppercase;font-size: 20px; font-weight: bold;}
+
+.button{padding: 18px 28px; background: #004AAD; color: #fff; display: inline-block; border-radius: 4px;}
+.button:hover{
+  border: 2px solid #004AAD;
+  background: #fff;
+  color: #004AAD;
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .big-text{font-size: 40px;}
+}
+
+/* ! Header */
+
+.header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*transform: translateX(-50%);*/
+  padding: 30px;
+  display: flex;
+  max-width: 1350px;
+}
+
+.logo{z-index: 1; left: 20px;}
+
+.menu{
+
+  transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  width: 100%;
+  z-index: 0;
+}
+
+.menu li{display: inline-block;}
+
+.menu li a{color: #fff;padding: 15px;display: block;}
+
+/* ! Tendina */
+nav{height: 52px; width: 100%; position: fixed; top: 28px; left: 70px;}
+
+nav ul{list-style: none; margin: 0 auto; padding: 0; width: 100%; max-width: 1200px;}
+
+nav ul ul{display: none; position: absolute; top: 100%; left: 0; width: 100%;}
+
+nav ul li{position: relative; float: left; width: 20%; text-align: center;}
+
+nav ul li:hover ul{display: block;}
+
+/*nav ul li:hover{background: #004AAD; transition: 0.5s;}*/
+
+nav ul li li{position: relative; float: none; width: 100%; border: none; color: #fff;}
+
+nav ul li a{display: block; text-decoration: none; color: #fff; padding: 15px 25px; font-size: 1.2em; }
+
+nav ul ul li a{font-size: 1rem;}
+
+nav ul ul li:first-child a{border-top: solid 2px #000;}
+
+nav ul li:hover a{color: #000; text-decoration: none; transition: 0.5s;}
+
+nav ul li li:hover a{background: #004AAD; color: #fff;}
+
+/* ! Tendina mobile */
+.menu{
+  width: 100%;
+}
+
+.menu li {display: inline-block; }
+.menu li a{color: #000; padding: 15px; display: block; text-decoration: none;}
+
+.hamburger {display: none;}
+
+.cta{}
+
+@media (max-width: 768px) {
+    .menu{display: block;}
+    .cta{display: none;}
+    nav {display: none;}
+    .menu{position: absolute; top: -20px; right: -100%; background: url('IMG_0038.jpg'); height: 100vh; padding-top: 150px;}
+    .menu li {display: block;}
+
+    .menu li a{padding: 35px 30px; font-size: 25px;}
+    .menu--open{right: 0; margin: 0;}
+    .hamburger {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 40px;
+      right: 30px;
+    }
+    .hamburger span{
+      background: #fff;
+      height: 3px;
+      width: 100%;
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+
+  /* ! FORM */
+
+  section{
+    height: 120vh;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .container{
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 35px;
+    box-shadow: 0px 0px 20px #00000010;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .form-group{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea{
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: 5px;
+  }
+
+  textarea{
+    resize: vertical;
+  }
+
+  .button_form[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+    color: #1680de;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .3s ease background-color;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .button_form[type="submit"]:hover{
+    background-color: rgb(214, 226, 236);
+  }
+
+  #status{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  #status.success{
+    background-color: rgb(211,250,153);
+    animation: status 4s ease delay forwards;
+  }
+
+  #status.error{
+    background-color: rgb(250,129,92);
+    color: #fff;
+    animation: status 4s ease forwards;
+  }
+
+  @keyframes status{
+    0%{
+      opacity: 1;
+      pointer-events: all;
+    }
+    90%{
+      opacity: 1;
+      pointer-events: all;
+    }
+    100%{
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .hero{
+    background:linear-gradient(0deg, rgba(0,0,0,.1), rgba(0,0,0,0.2)),url('pexels-pixabay-373076.jpg') no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    display: flex; width: 100%; align-items: center;
+  }
+
+  .hero__content{
+    width: 95%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .hero__content h1,
+  .hero__content p{color: #fff;}
+
+
+  /* ! Footer */
+  .footer{
+    background: #808080;
+    padding: 150px 0;
+  }
+
+  /* ! ICONE */
+
+  .facebook{
+    font-size: 35px;
+    padding: 0 5px;
+  }
+
+  .instagram{
+    font-size: 35px;
+    padding: 0 5px;
+  }
+
+  .linkedin{
+    font-size: 35px;
+    padding: 0 5px;
+  }
+
+
+
+
+  /* ! Grid */
+  .grid{display: flex; max-width: 1350px; padding: 0 30px; margin: 0 auto;}
+  .grid .col{width: 100%;}
+
+  @media (max-width: 768px) {
+    .grid{flex-wrap: wrap;}
+  }
+
+
+
+
+
+  /* ! Helpers */
+  .mt-1{margin-top: 50px;}
+  .mt-2{margin-top: 100px;}
+  .mt-3{margin-top: 150px;}
+
+  .tw{color: #fff;}
+
+  @media (max-width: 768px) {
+    .mt-sma-0{margin-top: 0;}
+    .mt-sma-0{margin-bottom: 0;}
+  }
+
+  *,
+  *:before,
+  *:after{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }

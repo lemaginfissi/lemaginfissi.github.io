@@ -1,0 +1,315 @@
+/* ! Base Style */
+body{
+  font-family: 'Inter', sans-serif;font-size: 16px;margin: 0; background: #fff;
+}
+.menu {display: none;}
+a{text-decoration: none; color: #fff;}
+
+h1, h2, h3, h4, h5, p{color: #black; padding-bottom: 30px;}
+
+p{
+  line-height: 28px;
+  color: #363636;
+  font-weight: 300;
+}
+
+.big-text{font-size: 70px; font-weight: 750;}
+.med-text{font-size: 40px;}
+.normal-text{font-size: 20px;}
+
+.small-text{font-size: 14px;}
+
+.intro-text{text-transform: uppercase;font-size: 20px; font-weight: bold;}
+
+.button{padding: 18px 28px; background: #004AAD; color: #fff; display: inline-block; border-radius: 4px;}
+.button:hover{
+  border: 2px solid #004AAD;
+  background: #fff;
+  color: #004AAD;
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .big-text{font-size: 40px;}
+}
+
+/* ! Header */
+
+.header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*transform: translateX(-50%);*/
+  padding: 30px;
+  display: flex;
+  max-width: 1350px;
+}
+
+.logo{z-index: 1; left: 20px;}
+
+.menu{
+
+  transition: all 1s cubic-bezier(.215, .61, .355, 1);
+  width: 100%;
+  z-index: 0;
+}
+
+
+/* ! Tendina */
+nav{height: 52px; width: 100%; position: fixed; top: 28px; left: 70px;}
+
+nav ul{list-style: none; margin: 0 auto; padding: 0; width: 100%; max-width: 1200px;}
+
+nav ul ul{display: none; position: absolute; top: 100%; left: 0; width: 100%;}
+
+nav ul li{position: relative; float: left; width: 20%; text-align: center;}
+
+nav ul li:hover ul{display: block;}
+
+/*nav ul li:hover{background: #004AAD; transition: 0.5s;}*/
+
+nav ul li li{position: relative; float: none; width: 100%; border: none; color: #fff;}
+
+nav ul li a{display: block; text-decoration: none; color: #fff; padding: 15px 25px; font-size: 1.2em; }
+
+nav ul ul li a{font-size: 1rem;}
+
+nav ul ul li:first-child a{border-top: solid 2px #000;}
+
+nav ul li:hover a{color: #000; text-decoration: none; transition: 0.5s;}
+
+nav ul li li:hover a{background: #004AAD; color: #fff;}
+
+/* ! Tendina mobile */
+.menu{
+  width: 100%;
+}
+
+.menu li {display: inline-block; }
+.menu li a{color: #000; padding: 15px; display: block; text-decoration: none;}
+
+.hamburger {display: none;}
+
+.cta{}
+
+@media (max-width: 768px) {
+    .menu{display: block;}
+    .cta{display: none;}
+    nav {display: none;}
+    .menu{position: absolute; top: -20px; right: -100%; background: url('IMG_0038.jpg'); height: 100vh; padding-top: 150px;}
+    .menu li {display: block;}
+
+    .menu li a{padding: 35px 30px; font-size: 25px;}
+    .menu--open{right: 0; margin: 0;}
+    .hamburger {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 40px;
+      right: 30px;
+    }
+    .hamburger span{
+      background: #fff;
+      height: 3px;
+      width: 100%;
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+/* ! Hero */
+
+.hero{
+  background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.9)), url('pexels-ksenia-chernaya-6999653.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex; width: 100%; align-items: center;
+}
+
+.hero__content{
+  width: 95%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.hero__content h1,
+.hero__content p{color: #fff;}
+
+
+/* ! Poster */
+
+.poster{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+
+.poster__img{
+  width: 65%;
+  height: 100%;
+}
+
+.poster__img img{object-fit: cover; width: 100%; height: 100%;}
+
+.poster__content{
+  width: 35%;
+  padding: 50px;
+}
+
+@media (max-width: 768px) {
+  .poster{flex-wrap: wrap; height: auto;}
+  .poster__img,
+  .poster__content{width: 100%;}
+}
+
+/* ! BG Cover */
+.bg-cover{
+  display: flex;
+  padding: 100px 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.7), rgba(0,0,0,0.7)), url('pexels-digital-buggu-226515.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.bg-cover__text{width: 50%; padding: 30px;}
+
+.bg-cover__title{
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .bg-cover{flex-wrap: wrap; height: auto;}
+  .bg-cover__text,
+  .bg-cover__title{width: 100%}
+}
+
+/* ! Grid */
+.grid{display: flex; max-width: 1350px; padding: 0 30px; margin: 0 auto;}
+.grid .col{width: 100%;}
+
+@media (max-width: 768px) {
+  .grid{flex-wrap: wrap;}
+}
+
+/* ! Carousel */
+.main-carousel{padding: 40px 0;}
+
+.carousel-cell{
+  height: 350px;
+  width: 350px;
+  margin: 100px;
+}
+
+.carousel-cell__content{
+  background: #004AAD;
+  border-radius: 50%;
+  line-height: 350px;
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+}
+.flickity-page-dots{display: none;}
+.flickity-button-icon{display: none;}
+.flickity-button{display: none;}
+.flickity-prev-next-button next{display: none;}
+
+
+/* ! Footer */
+.footer{
+  background: #808080;
+  padding: 150px 0;
+}
+
+/* ! ICONE */
+
+.facebook{
+  font-size: 35px;
+  padding: 0 5px;
+}
+
+.instagram{
+  font-size: 35px;
+  padding: 0 5px;
+}
+
+.linkedin{
+  font-size: 35px;
+  padding: 0 5px;
+}
+
+
+
+
+.hero_2{
+  background: url('Schermata 2022-04-24 alle 14.01.02.png') no-repeat center center;
+  background-size: contain;
+  height: 900%;
+  display: flex;
+  align-items: center;
+  padding: 250px;
+}
+
+.hero_3{
+  background: url('Schermata 2022-04-24 alle 15.34.13.png') no-repeat center center;
+  background-size: contain;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 250px;
+}
+
+.hero_4{
+  background: url('Schermata 2022-04-24 alle 15.34.49.png') no-repeat center center;
+  background-size: contain;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 250px;
+}
+
+.hero_5{
+  background: url('Schermata 2022-04-24 alle 15.35.31.png') no-repeat center center;
+  background-size: contain;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ! Helpers */
+.mt-1{margin-top: 50px;}
+.mt-2{margin-top: 100px;}
+.mt-3{margin-top: 150px;}
+
+.tw{color: #fff;}
+
+@media (max-width: 768px) {
+  .mt-sma-0{margin-top: 0;}
+  .mt-sma-0{margin-bottom: 0;}
+}
+
+*,
+*:before,
+*:after{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}

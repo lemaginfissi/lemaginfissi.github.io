@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Modello Tendina</title>
+    <link rel="stylesheet" type="text/css" href="tendina.css">
+    <script src="https://kit.fontawesome.com/66343c0864.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Chi siamo</a></li>
+        <li><a href="">Prodotti</a>
+          <ul>
+            <li><a href="#">Finestre</a></li>
+            <li><a href="#">Finestre scorrevoli</a></li>
+            <li><a href="#">Persiane</a></li>
+            <li><a href="#">Grate</a></li>
+            <li><a href="#">Zanzariere</a></li>
+            <li><a href="#">Porte</a></li>
+            <li><a href="#">Finiture</a></li>
+            <li><a href="#">Accessori</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contatti</a></li>
+        <li><a href="#">Chiedi un preventivo</a></li>
+      </ul>
+   </nav>
+ </div>
+ <ul class="menu">
+       <li><a href="#">Home</a></li>
+       <li><a href="#">Chi siamo</a></li>
+       <li><a href="">Prodotti</a></li>
+       <li><a href="#">Contatti</a></li>
+       <li><a href="#">Chiedi un preventivo</a></li>
+     </ul>
+<i class="fa-solid fa-palette"></i>
+
+<div class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+ </header>
+
+
+
+
+ <!-- Jquery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js" integrity="sha512-+m9auGg9ZwnDc37W8RSsLhzKBLVOYsf5BKzSpYrYhQQk6hItXOhBFKHuHbMCpoABCUO6l4HVK+dFwxMIME3E7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+   $( document ).ready(function() {
+
+     /* Open Panel */
+     $( ".hamburger" ).on('click', function() {
+       $(".menu").toggleClass("menu--open");
+     });
+
+   });
+   ScrollReveal().reveal('.reveal', { distance: '100px', duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 600 });
+   ScrollReveal().reveal('.zoom', { duration: 1500, easing: 'cubic-bezier(.215, .61, .355, 1)', interval: 200, scale: 0.65, mobile: false });
+ </script>
+
+  </body>
+</html>
